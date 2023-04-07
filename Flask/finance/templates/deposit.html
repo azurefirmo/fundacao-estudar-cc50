@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block script %}
+    <script defer src="../static/deposit.js"></script>
+{% endblock %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+
+    <section class="container">
+        <form action="/deposit" method="POST">
+            <div class="form-group">
+                <label for="money">
+                    Money to deposit:
+                    <input class="form-control" type="number" name="money" id="money" placeholder="10000">
+                </label>
+            </div>
+            <input class="btn btn-primary" type="submit" value="Deposit money">
+        </form>
+        <div class="container p-3">
+            <p class="text-danger" id="warning"></p>
+        </div>
+    </section>
+
+{% endblock %}
